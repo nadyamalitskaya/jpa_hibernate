@@ -1,0 +1,35 @@
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
+        </property>
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://localhost:5432/postgres
+        </property>
+
+        <property name="connection_pool_size">1</property>
+        <property name="hbm2ddl.auto">create</property>
+        <property name="show_sql">true</property>
+
+        <mapping class="com.nixsolution.jpa_hibernate.entity.UserLogin"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.SystemUser"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.UserRole"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.Item"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.StatusComment"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.ItemStatus"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.OrderStatus"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.Book"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.Author"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.Genre"/>
+        <mapping
+                class="com.nixsolution.jpa_hibernate.entity.CompositionComment"/>
+        <mapping class="com.nixsolution.jpa_hibernate.entity.UserOrder"/>
+
+
+    </session-factory>
+</hibernate-configuration>
